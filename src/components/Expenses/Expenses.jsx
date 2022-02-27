@@ -1,3 +1,4 @@
+import "./Expenses.css";
 import ExpenseList from "./ExpenseList";
 
 function Expenses(props) {
@@ -28,7 +29,7 @@ function Expenses(props) {
         <h2 className="a11y-hidden">지출 내역 생성 폼</h2>
         지출 내역 생성 폼
       </section>
-      <section style={{ backgroundColor: "rgb(163,204,163)" }}>
+      <section className="expenses">
         <h2 className="a11y-hidden">지출 내역 정보 조회</h2>
         지출 내역 정보 조회
         <div>지출내역 filter</div>

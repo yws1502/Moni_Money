@@ -1,3 +1,5 @@
+import "./ExpenseItem.css";
+
 function ExpenseItem(props) {
   const item = props.expense;
   const year = item.date.getFullYear();
@@ -7,14 +9,16 @@ function ExpenseItem(props) {
   const price = +item.price;
 
   return (
-    <li>
-      <div>
-        <span>{year}-</span>
-        <span>{month}-</span>
+    <li className="expense-item">
+      <div className="date-cont">
+        <span>{year}</span>
+        <span>{month + 1}</span>
         <span>{day}</span>
       </div>
-      <strong>{item.title}</strong>
-      <div>{price.toLocaleString()} ₩</div>
+      <div className="expense-info">
+        <strong>{item.title}</strong>
+        <span>{price.toLocaleString()} ₩</span>
+      </div>
     </li>
   );
 }
