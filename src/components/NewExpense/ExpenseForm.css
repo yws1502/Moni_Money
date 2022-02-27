@@ -1,0 +1,45 @@
+.expense-form-cont {
+  background-color: #F7ECDE;
+}
+
+.expense-form-cont form {
+  overflow: hidden;
+}
+
+.input-cont {
+  display: flex;
+  flex-wrap: wrap;
+}
+.input-cont fieldset {
+  width: 50%;
+  margin-bottom: 17px;
+}
+.input-cont fieldset label {
+  display: block;
+  color: rgba(0,0,0,0.8);
+  font-weight: 550;
+  margin: 0 0 10px 7px;
+}
+.input-cont fieldset input {
+  width: 90%;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  outline-color: #E9DAC1;
+  padding: 10px;
+}
+
+.expense-form-cont .date-cont {
+  float: right;
+  margin-right: 15px;
+}
+.expense-form-cont .date-cont button {
+  background-color: #54BAB9;
+  color: #fff;
+  border-radius: 7px;
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: all .3s ease-out;
+}
+.expense-form-cont .date-cont button:hover {
+  background-color: #5ad1cf;
+}
