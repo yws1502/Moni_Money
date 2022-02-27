@@ -2,24 +2,18 @@ import "./Chart.css";
 import ChartItem from "./ChartItem";
 
 function Chart(props) {
-  const mon = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Nov",
-    "Dec",
-  ];
+  const valueList = props.chartData.map((data) => data.value);
+  const maxValue = Math.max(...valueList);
   return (
     <div>
       <ul className="chart-cont">
-        {mon.map((el) => (
-          <ChartItem month={el} />
+        {props.chartData.map((month) => (
+          <ChartItem
+            key={month.label}
+            month={month.label}
+            value={month.value}
+            maxValue={maxValue}
+          />
         ))}
       </ul>
     </div>

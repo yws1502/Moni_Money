@@ -1,9 +1,9 @@
 import "./Expenses.css";
-import Chart from "../Chart/Chart";
 import ExpenseList from "./ExpenseList";
 import ExpenseFilter from "./ExpenseFilter";
 import Card from "../UI/Card";
 import { useState } from "react";
+import ExpenseChart from "./ExpenseChart";
 
 function Expenses(props) {
   const [selectedDate, setSelectedDate] = useState("2022");
@@ -23,7 +23,7 @@ function Expenses(props) {
         onSelectValue={getSelectValue}
         defaultDate={selectedDate}
       />
-      <Chart expenses={expenses} />
+      <ExpenseChart expenses={expenses} />
       <ExpenseList expenses={expenses} />
     </Card>
   );
