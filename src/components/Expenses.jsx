@@ -1,4 +1,27 @@
+import ExpenseList from "./ExpenseList";
+
 function Expenses(props) {
+  const testData = [
+    {
+      id: "e1",
+      title: "pasta",
+      price: "13000",
+      date: new Date(),
+    },
+    {
+      id: "e2",
+      title: "samgyupsal",
+      price: "23000",
+      date: new Date(),
+    },
+    {
+      id: "e3",
+      title: "PC station",
+      price: "3000",
+      date: new Date(),
+    },
+  ];
+
   return (
     <div role="main">
       <section style={{ height: "100px", backgroundColor: "pink" }}>
@@ -10,14 +33,7 @@ function Expenses(props) {
         지출 내역 정보 조회
         <div>지출내역 filter</div>
         <div>지출 내역 그래프</div>
-        <div>
-          지출 내역
-          <ul>
-            <li>지출 내역 아이템</li>
-            <li>지출 내역 아이템</li>
-            <li>지출 내역 아이템</li>
-          </ul>
-        </div>
+        <ExpenseList expenses={testData} />
       </section>
     </div>
   );
