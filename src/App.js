@@ -1,9 +1,16 @@
-
+import Expenses from "./components/Expenses";
 
 function App () {
   return (
-    <div>
-    </div>
+    <>
+      <header>
+        <h1>
+          Moni Money -
+          <span>Expenses History</span>
+        </h1>
+      </header>
+      <Expenses />
+    </>
   );
 }
 
