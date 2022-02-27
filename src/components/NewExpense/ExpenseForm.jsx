@@ -1,6 +1,4 @@
 import { useState } from "react";
-import "./ExpenseForm.css";
-import Card from "../UI/Card";
 
 function ExpenseForm(props) {
   const [enteredTitle, setEnteredTitle] = useState("");
@@ -34,39 +32,39 @@ function ExpenseForm(props) {
   };
 
   return (
-    <Card className="expense-form-cont">
-      <h2 className="a11y-hidden">지출 생성 영역</h2>
-      <form onSubmit={submitHandler}>
-        <div className="input-cont">
-          <fieldset>
-            <label>Title</label>
-            <input
-              onChange={inputHandler}
-              type="text"
-              placeholder="지출 내역을 입력하세요"
-              value={enteredTitle}
-            />
-          </fieldset>
-          <fieldset>
-            <label>Price</label>
-            <input
-              onChange={inputHandler}
-              type="number"
-              min="0"
-              placeholder="숫자만 입력 가능합니다."
-              value={enteredPrice}
-            />
-          </fieldset>
-          <fieldset>
-            <label>Date</label>
-            <input onChange={inputHandler} type="date" value={enteredDate} />
-          </fieldset>
-        </div>
-        <div className="button-cont">
-          <button type="submit">지출 💰</button>
-        </div>
-      </form>
-    </Card>
+    <form onSubmit={submitHandler}>
+      <div className="input-cont">
+        <fieldset>
+          <label>Title</label>
+          <input
+            onChange={inputHandler}
+            type="text"
+            placeholder="지출 내역을 입력하세요"
+            value={enteredTitle}
+          />
+        </fieldset>
+        <fieldset>
+          <label>Price</label>
+          <input
+            onChange={inputHandler}
+            type="number"
+            min="0"
+            placeholder="숫자만 입력 가능합니다."
+            value={enteredPrice}
+          />
+        </fieldset>
+        <fieldset>
+          <label>Date</label>
+          <input onChange={inputHandler} type="date" value={enteredDate} />
+        </fieldset>
+      </div>
+      <div className="button-cont">
+        <button onClick={props.onShowForm} type="button">
+          Cancel
+        </button>
+        <button type="submit">지출 💰</button>
+      </div>
+    </form>
   );
 }
 
