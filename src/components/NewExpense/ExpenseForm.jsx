@@ -1,6 +1,8 @@
+import Card from "../UI/Card";
+
 function ExpenseForm(props) {
   return (
-    <section>
+    <Card>
       <h2 className="a11y-hidden">지출 생성 영역</h2>
       <form>
         <fieldset>
@@ -24,7 +26,7 @@ function ExpenseForm(props) {
       <div>
         <button type="submit">지출💰</button>
       </div>
-    </section>
+    </Card>
   );
 }
 
