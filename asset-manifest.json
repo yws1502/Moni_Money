@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/moni_money/static/css/main.8ba98361.css",
+    "main.js": "/moni_money/static/js/main.b471c721.js",
+    "index.html": "/moni_money/index.html",
+    "main.8ba98361.css.map": "/moni_money/static/css/main.8ba98361.css.map",
+    "main.b471c721.js.map": "/moni_money/static/js/main.b471c721.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8ba98361.css",
+    "static/js/main.b471c721.js"
+  ]
+}
