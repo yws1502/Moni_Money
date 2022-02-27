@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./ExpenseForm.css";
 import Card from "../UI/Card";
 
@@ -6,14 +6,6 @@ function ExpenseForm(props) {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredPrice, setEnteredPrice] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
-  const [expenseList, setExpenseList] = useState([]);
-
-  useEffect(() => {
-    const prevData = localStorage.getItem("expenses");
-    if (prevData !== null) {
-      setExpenseList(prevData);
-    }
-  }, []);
 
   const inputHandler = (e) => {
     const currentNode = e.target;
@@ -34,14 +26,8 @@ function ExpenseForm(props) {
       price: enteredPrice,
       date: new Date(enteredDate),
     };
-    setExpenseList((prev) => {
-      const totalData = [...prev, newData];
-      const jsonData = JSON.stringify(totalData);
-      localStorage.setItem("expenses", jsonData);
 
-      return totalData;
-    });
-
+    props.onSaveData(newData);
     setEnteredTitle("");
     setEnteredPrice("");
     setEnteredDate("");
