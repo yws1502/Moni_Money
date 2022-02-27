@@ -1,3 +1,4 @@
+import ExpenseForm from "./components/NewExpense/ExpenseForm";
 import Expenses from "./components/Expenses/Expenses";
 
 function App () {
@@ -5,11 +6,13 @@ function App () {
     <>
       <header>
         <h1>
-          Moni Money -
-          <span>Expenses History</span>
+          Moni Money -<span>Expenses History</span>
         </h1>
       </header>
-      <Expenses />
+      <div role="main">
+        <ExpenseForm />
+        <Expenses />
+      </div>
     </>
   );
 }
