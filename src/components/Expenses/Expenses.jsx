@@ -1,4 +1,5 @@
 import "./Expenses.css";
+import Chart from "../Chart/Chart";
 import ExpenseList from "./ExpenseList";
 import ExpenseFilter from "./ExpenseFilter";
 import Card from "../UI/Card";
@@ -22,7 +23,7 @@ function Expenses(props) {
         onSelectValue={getSelectValue}
         defaultDate={selectedDate}
       />
-      <div>지출 내역 그래프</div>
+      <Chart expenses={expenses} />
       <ExpenseList expenses={expenses} />
     </Card>
   );
