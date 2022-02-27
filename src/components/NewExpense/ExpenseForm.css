@@ -12,7 +12,8 @@
 }
 .input-cont fieldset {
   width: 50%;
-  margin-bottom: 17px;
+  padding: 5px;
+  margin-bottom: 10px;
 }
 .input-cont fieldset label {
   display: block;
@@ -25,21 +26,37 @@
   border: 1px solid #fff;
   border-radius: 8px;
   outline-color: #E9DAC1;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   padding: 10px;
 }
 
-.expense-form-cont .date-cont {
+.expense-form-cont .button-cont {
   float: right;
   margin-right: 15px;
 }
-.expense-form-cont .date-cont button {
+.expense-form-cont .button-cont button {
   background-color: #54BAB9;
   color: #fff;
+  border: 2px solid #fff;
   border-radius: 7px;
   cursor: pointer;
   padding: 10px 15px;
   transition: all .3s ease-out;
 }
-.expense-form-cont .date-cont button:hover {
+.expense-form-cont .button-cont button:hover {
   background-color: #5ad1cf;
+}
+
+@media (max-width: 500px) {
+  .input-cont {
+    flex-direction: column;
+    align-items: center;
+  }
+  .input-cont fieldset {
+    width: 90%;
+  }
+
+  .expense-form-cont .button-cont {
+    margin-top: 20px;
+  }
 }

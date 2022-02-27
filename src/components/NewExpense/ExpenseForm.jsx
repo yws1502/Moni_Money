@@ -62,7 +62,7 @@ function ExpenseForm(props) {
             <input onChange={inputHandler} type="date" value={enteredDate} />
           </fieldset>
         </div>
-        <div className="date-cont">
+        <div className="button-cont">
           <button type="submit">지출 💰</button>
         </div>
       </form>
