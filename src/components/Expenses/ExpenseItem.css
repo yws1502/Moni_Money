@@ -54,3 +54,17 @@
   background-color: #54BAB9;
   padding: 10px;
 }
+
+@media (max-width: 500px) {
+  .expense-info {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: 5px;
+  }
+  .expense-info strong {
+    font-size: 15px;
+  }
+  .expense-info span {
+    padding: 7px;
+  }
+}
